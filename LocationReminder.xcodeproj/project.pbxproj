@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		005FF6544E141977ED62D321 /* Pods_LocationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAB3532831C12DCA4B43674 /* Pods_LocationReminder.framework */; };
 		3DDF23FE22DB52AC00A57A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF23FD22DB52AC00A57A44 /* AppDelegate.swift */; };
 		3DDF240022DB52AC00A57A44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF23FF22DB52AC00A57A44 /* ViewController.swift */; };
 		3DDF240322DB52AC00A57A44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDF240122DB52AC00A57A44 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		3DDF240422DB52AF00A57A44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DDF240722DB52AF00A57A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DDF240922DB52AF00A57A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		816A583FBC21F174FCA0C2F8 /* Pods-LocationReminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationReminder.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocationReminder/Pods-LocationReminder.release.xcconfig"; sourceTree = "<group>"; };
+		9AAB3532831C12DCA4B43674 /* Pods_LocationReminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocationReminder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9BAD4224C2560C9101B26E1 /* Pods-LocationReminder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationReminder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocationReminder/Pods-LocationReminder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005FF6544E141977ED62D321 /* Pods_LocationReminder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				3DDF23FC22DB52AC00A57A44 /* LocationReminder */,
 				3DDF23FB22DB52AC00A57A44 /* Products */,
+				AE92CB6194D71B7C46293A2D /* Pods */,
+				A03D73DB08730CC0E2B4B9CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = LocationReminder;
 			sourceTree = "<group>";
 		};
+		A03D73DB08730CC0E2B4B9CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AAB3532831C12DCA4B43674 /* Pods_LocationReminder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE92CB6194D71B7C46293A2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9BAD4224C2560C9101B26E1 /* Pods-LocationReminder.debug.xcconfig */,
+				816A583FBC21F174FCA0C2F8 /* Pods-LocationReminder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DDF240C22DB52AF00A57A44 /* Build configuration list for PBXNativeTarget "LocationReminder" */;
 			buildPhases = (
+				700F81DBCFCEAD9B07DFFDC4 /* [CP] Check Pods Manifest.lock */,
 				3DDF23F622DB52AC00A57A44 /* Sources */,
 				3DDF23F722DB52AC00A57A44 /* Frameworks */,
 				3DDF23F822DB52AC00A57A44 /* Resources */,
+				C0734B9F90DB0849F9DD3780 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		700F81DBCFCEAD9B07DFFDC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LocationReminder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0734B9F90DB0849F9DD3780 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LocationReminder/Pods-LocationReminder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocationReminder/Pods-LocationReminder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3DDF23F622DB52AC00A57A44 /* Sources */ = {
@@ -280,6 +357,7 @@
 		};
 		3DDF240D22DB52AF00A57A44 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9BAD4224C2560C9101B26E1 /* Pods-LocationReminder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +375,7 @@
 		};
 		3DDF240E22DB52AF00A57A44 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 816A583FBC21F174FCA0C2F8 /* Pods-LocationReminder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
