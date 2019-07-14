@@ -61,14 +61,38 @@
 		3DDF23FC22DB52AC00A57A44 /* LocationReminder */ = {
 			isa = PBXGroup;
 			children = (
+				3DDF241122DB5BA300A57A44 /* ViewModels */,
+				3DDF241022DB5B9A00A57A44 /* Models */,
+				3DDF240F22DB5B4000A57A44 /* Views */,
 				3DDF23FD22DB52AC00A57A44 /* AppDelegate.swift */,
-				3DDF23FF22DB52AC00A57A44 /* ViewController.swift */,
 				3DDF240122DB52AC00A57A44 /* Main.storyboard */,
 				3DDF240422DB52AF00A57A44 /* Assets.xcassets */,
 				3DDF240622DB52AF00A57A44 /* LaunchScreen.storyboard */,
 				3DDF240922DB52AF00A57A44 /* Info.plist */,
 			);
 			path = LocationReminder;
+			sourceTree = "<group>";
+		};
+		3DDF240F22DB5B4000A57A44 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3DDF23FF22DB52AC00A57A44 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3DDF241022DB5B9A00A57A44 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3DDF241122DB5BA300A57A44 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		A03D73DB08730CC0E2B4B9CB /* Frameworks */ = {
