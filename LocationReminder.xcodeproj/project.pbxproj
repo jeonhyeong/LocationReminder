@@ -9,20 +9,22 @@
 /* Begin PBXBuildFile section */
 		005FF6544E141977ED62D321 /* Pods_LocationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAB3532831C12DCA4B43674 /* Pods_LocationReminder.framework */; };
 		3DDF23FE22DB52AC00A57A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF23FD22DB52AC00A57A44 /* AppDelegate.swift */; };
-		3DDF240022DB52AC00A57A44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF23FF22DB52AC00A57A44 /* ViewController.swift */; };
 		3DDF240322DB52AC00A57A44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDF240122DB52AC00A57A44 /* Main.storyboard */; };
 		3DDF240522DB52AF00A57A44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DDF240422DB52AF00A57A44 /* Assets.xcassets */; };
 		3DDF240822DB52AF00A57A44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDF240622DB52AF00A57A44 /* LaunchScreen.storyboard */; };
+		3DDF241B22DB98E500A57A44 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF241A22DB98E500A57A44 /* ToDoTableViewController.swift */; };
+		3DDF241D22DB990500A57A44 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF241C22DB990500A57A44 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3DDF23FA22DB52AC00A57A44 /* LocationReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDF23FD22DB52AC00A57A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DDF23FF22DB52AC00A57A44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DDF240222DB52AC00A57A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DDF240422DB52AF00A57A44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DDF240722DB52AF00A57A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DDF240922DB52AF00A57A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DDF241A22DB98E500A57A44 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
+		3DDF241C22DB990500A57A44 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		816A583FBC21F174FCA0C2F8 /* Pods-LocationReminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationReminder.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocationReminder/Pods-LocationReminder.release.xcconfig"; sourceTree = "<group>"; };
 		9AAB3532831C12DCA4B43674 /* Pods_LocationReminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocationReminder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BAD4224C2560C9101B26E1 /* Pods-LocationReminder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationReminder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocationReminder/Pods-LocationReminder.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,7 +78,8 @@
 		3DDF240F22DB5B4000A57A44 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3DDF23FF22DB52AC00A57A44 /* ViewController.swift */,
+				3DDF241A22DB98E500A57A44 /* ToDoTableViewController.swift */,
+				3DDF241C22DB990500A57A44 /* AddViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,8 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DDF240022DB52AC00A57A44 /* ViewController.swift in Sources */,
 				3DDF23FE22DB52AC00A57A44 /* AppDelegate.swift in Sources */,
+				3DDF241B22DB98E500A57A44 /* ToDoTableViewController.swift in Sources */,
+				3DDF241D22DB990500A57A44 /* AddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
