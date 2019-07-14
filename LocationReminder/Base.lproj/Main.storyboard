@@ -13,7 +13,7 @@
         <!--Location ToDo-->
         <scene sceneID="POh-4z-jps">
             <objects>
-                <tableViewController id="bOt-Te-Vaf" customClass="ToDoTableViewController" customModule="LocationReminder" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bOt-Te-Vaf" customClass="TasksTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="osa-Kz-F1W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,22 +69,50 @@
                     <view key="view" contentMode="scaleToFill" id="DjW-68-Pwj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CwR-tS-1vH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="note" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b4f-4V-4dZ">
+                                <rect key="frame" x="0.0" y="161" width="414" height="153"/>
+                                <color key="backgroundColor" red="0.78036189970000003" green="0.95701496590000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b4f-4V-4dZ" firstAttribute="top" secondItem="CwR-tS-1vH" secondAttribute="bottom" constant="43" id="112-70-JRB"/>
+                            <constraint firstItem="b4f-4V-4dZ" firstAttribute="trailing" secondItem="ubU-mw-xXB" secondAttribute="trailing" id="2hE-r3-8tH"/>
+                            <constraint firstItem="CwR-tS-1vH" firstAttribute="leading" secondItem="ubU-mw-xXB" secondAttribute="leading" id="4cL-eB-eEg"/>
+                            <constraint firstItem="ubU-mw-xXB" firstAttribute="bottom" secondItem="b4f-4V-4dZ" secondAttribute="bottom" constant="548" id="5cE-6G-yPz"/>
+                            <constraint firstItem="b4f-4V-4dZ" firstAttribute="leading" secondItem="ubU-mw-xXB" secondAttribute="leading" id="9u5-Yx-rfr"/>
+                            <constraint firstItem="CwR-tS-1vH" firstAttribute="trailing" secondItem="ubU-mw-xXB" secondAttribute="trailing" id="vxQ-Rl-o5d"/>
+                            <constraint firstItem="CwR-tS-1vH" firstAttribute="top" secondItem="ubU-mw-xXB" secondAttribute="top" id="xqb-TW-OpJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ubU-mw-xXB"/>
                     </view>
                     <navigationItem key="navigationItem" title="add" id="RcM-6n-BYx">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Y4v-9b-6Vf"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="U1i-v7-q2h"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cancleButton" destination="Y4v-9b-6Vf" id="fIE-eC-Axn"/>
+                        <outlet property="saveButton" destination="U1i-v7-q2h" id="S1y-xK-nru"/>
+                        <outlet property="titleTextField" destination="CwR-tS-1vH" id="ukc-8v-mZk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3J-hI-bgM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="630" y="751"/>
+            <point key="canvasLocation" x="628.98550724637687" y="750.66964285714278"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tas-->
         <scene sceneID="cFq-b1-g12">
             <objects>
-                <navigationController id="dCa-za-din" sceneMemberID="viewController">
+                <navigationController id="dCa-za-din" customClass="tas" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2pq-EF-BHG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

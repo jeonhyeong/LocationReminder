@@ -7,16 +7,51 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class AddViewController: UIViewController {
 
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var cancleButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    var disposeBag:DisposeBag = DisposeBag()
+    var taskViewModel = TaskViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        onCancle()
+        bindInput()
+        bindOutput()
     }
     
-
+    override func viewWillDisappear(_ animated: Bool) {
+        disposeBag = DisposeBag()
+    }
+    
+    func onCancle() {
+        cancleButton.rx.tap
+            .subscribe(onNext: { self.dismiss(animated: true, completion: nil) })
+            .disposed(by: disposeBag)
+    }
+    
+    func onSaveButton() {
+        
+    }
+    
+    func bindInput() {
+        titleTextField.rx.text.orEmpty
+            .bind(to: taskViewModel.titleText)
+            .disposed(by: disposeBag)
+    }
+    
+    func bindOutput() {
+        taskViewModel.validTitleText
+            .drive(onNext: { self.navigationItem.rightBarButtonItem?.isEnabled = $0 })
+            .disposed(by: disposeBag)
+    }
+    
     /*
     // MARK: - Navigation
 
